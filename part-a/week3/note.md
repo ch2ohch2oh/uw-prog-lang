@@ -147,3 +147,26 @@ Equality types
 
 Avoid nested `case of`.
 
+### Function patterns
+
+Define a function using patterns.
+```
+fun eval (Constant i) = i
+  | eval (Negate e2) = ~ (eval e2)
+  | eval (Add(e1,e2)) = (eval e1) + (eval e2)
+  | eval (Multiply(e1,e2)) = (eval e1) * (eval e2)
+```
+
+### Tail recursion
+
+Recusion just can be as efficient as a loop.
+
+How to optimize tail recursion: **reuse the same 
+call stack frame**.
+
+Tail-recursive: recursive calls are tail-calls.
+In other words, there is no more work to do
+after the tail call.
+
+One can use a accumulator the turn a recusive call
+into a tail call.
