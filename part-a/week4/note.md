@@ -64,3 +64,65 @@ There are technical reasons where lexical scope is better.
 1. Function meaning does not depend on variable names used.
 2. Functions can be type-checked and reasoned about where defined.
 3. Closures can easily store the data they need.
+
+### Closure
+
+A function body is not evaluated until the function is called.
+
+### Fold
+
+Another classic higher order function.
+```
+fun fold (f,acc,xs) =
+    case xs of 
+	[] => acc
+      | x::xs' => fold (f,f(acc,x),xs')
+```
+
+### Combining functions
+
+Note the function composition operator in ML is the lower letter `o`.
+```
+fun sqrt_of_abs i = Math.sqrt(Real.fromInt (abs i))
+
+fun sqrt_of_abs i = (Math.sqrt o Real.fromInt o abs) i
+```
+
+### Currying
+
+"Currying" is named after the famous logician Haskell Curry.
+
+Every ML function takes exactly one argument. 
+Mutiple arguments can be encoded as one n-tuple. 
+One can also take one argument and return a function that 
+takes another argument and ...
+
+An example: 
+```
+val sorted3 = fn x => fn y => fn z => z >= y andalso y >= x
+
+(* syntactic sugar for defining curried functions: space between arguments *)
+fun sorted3_nicer x y z = z >= y andalso y >= x
+```
+The type of `sorted3` is 
+```
+val sorted3 = fn : int -> int -> int -> bool
+```
+
+### Partial application
+
+### Mutable references
+
+New expressions
+- `refe e` to create a reference with content `e`
+- `e1 := e2` to update content
+- `!e` to retrieve contents
+
+### Callbacks
+
+Callbacks are executed for side-effect.
+
+### ML standard library
+
+www.standardml.org/Basics/manPages.html
+
