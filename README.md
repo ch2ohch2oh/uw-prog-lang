@@ -1,11 +1,16 @@
 # Programming Languages by Dan Grossman on Coursera
 
 There are three parts for this course. 
-1. Part a uses Standard ML to cover pattern matching, type
-    checking, higher-order functions, tail recursion and other
-    functional programming concepts.
-2. ...
-3. ...
+
+## Part a 
+
+Part a uses Standard ML as the programming language. 
+It is a statically typed language.
+
+- Basics, functions, recursion, scope, variables, lists...
+- Datatypes, pattern matching, tail recursion
+- First-class functions, closures, lexical scoping
+- Type inference, modules and equivalence
 
 The three parts altogether constitute a one semester
 course at University of Washington.
