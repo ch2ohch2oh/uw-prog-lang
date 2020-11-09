@@ -33,3 +33,6 @@ A signature is a type of a module: it tells
 what binds does it have and what are their types.
 This looks like the interfece in Java.
 
+### Standard equivalences
+
+- Syntactic sugar
