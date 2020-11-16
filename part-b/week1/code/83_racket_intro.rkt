@@ -6,7 +6,7 @@
 
 ; not needed here, but a workaround so we could write tests in a second file
 ; see getting-started-with-Racket instructions for more explanation
-(provide (all-defined-out))
+(provide (all-defined-out)) ; make everything in this file public for testing
 
 ; basic definitions
 (define s "hello")
